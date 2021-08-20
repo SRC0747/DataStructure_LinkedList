@@ -46,9 +46,9 @@ public class MyLinkedListTest {
 }
 
 @Test
-/*Creating A linked list inserting 30 between 56 and 70.*/
+/*Delete the first element of the Linked List in 56,30,70 Sequence.*/
 public class MyLinkedListTest {
-    public void given3NumbersWhenAddedToLinkedListShouldBeAddedToTop(){
+    public void given3NumbersWhenAddedToLinkedListShouldBeAddedToTop() {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
@@ -56,7 +56,10 @@ public class MyLinkedListTest {
         myLinkedList.add(myFirstNode);
         myLinkedList.add(mySecondNode);
         myLinkedList.add(myThirdNode);
-        boolean result = myLinkedList.head.equals(myThirdNode) &&  myLinkedList.head.getNext().equals(mySecondNode) &&  myLinkedList.tail.equals(myFirstNode);
+        myLinkedList.add(myFirstNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.insert(myFirstNode,mySecondNode);
+        boolean result = myLinkedList.head.equals(myFirstNode) && myLinkedList.head.getNext().equals(mySecondNode) && myLinkedList.tail.equals(myThirdNode);
         Assert.assertTrue(result);
     }
 }
