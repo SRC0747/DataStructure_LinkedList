@@ -58,8 +58,30 @@ public class MyLinkedListTest {
         myLinkedList.add(myThirdNode);
         myLinkedList.add(myFirstNode);
         myLinkedList.append(myThirdNode);
-        myLinkedList.insert(myFirstNode,mySecondNode);
-        boolean result = myLinkedList.head.equals(myFirstNode) && myLinkedList.head.getNext().equals(mySecondNode) && myLinkedList.tail.equals(myThirdNode);
+        myLiinkedList.insert(myFirstNode,mySecondNode);
+        myLinkedList.pop();
+        boolean result = myLinkedList.head.equals(myFirstNode) &&  myLinkedList.head.getNext().equals(mySecondNode) &&  myLinkedList.tail.equals(myThirdNode);
+        Assert.assertTrue(result);
+    }
+}
+
+@Test
+/*Delete the Last element of the Linked List in 56,30,70 Sequence.*/
+public class MyLinkedListTest {
+    public void given3NumbersWhenAddedToLinkedListShouldBeAddedToTop() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.add(myFirstNode);
+        myLinkedList.add(mySecondNode);
+        myLinkedList.add(myThirdNode);
+        myLinkedList.add(myFirstNode);
+        myLinkedList.append(myThirdNode);
+        myLiinkedList.insert(myFirstNode,mySecondNode);
+        myLinkedList.pop();
+        myLinkedList.popLast();
+        boolean result = myLinkedList.head.equals(myFirstNode) &&  myLinkedList.head.getNext().equals(mySecondNode) &&  myLinkedList.tail.equals(myThirdNode);
         Assert.assertTrue(result);
     }
 }
