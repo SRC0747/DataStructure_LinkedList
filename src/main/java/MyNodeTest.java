@@ -1,14 +1,16 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-public class MyNodeTest {
-    public void given3NumbersWhenLinkShouldPassedLinkedListTest(){
-        MyNode<Integer> myFirstNode = new MyNode(56);
-        MyNode<Integer> mySecondNode = new MyNode(30);
-        MyNode<Integer> myThirdNode = new MyNode(70);
-        myFirstNode.setNext(mySecondNode);
-        mySecondNode.setNext(myThirdNode);
-        boolean result = myFirstNode.getNext().equals(mySecondNode) && myFirstNode.getNext().getNext().equals(myThirdNode);
+public class MyLinkedListTest {
+    public void given3NumbersWhenAddedToLinkedListShouldBeAddedToTop(){
+        MyNode<Integer> myFirstNode = new MyNode<>(70);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(56);
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.add(myFirstNode);
+        myLinkedList.add(mySecondNode);
+        myLinkedList.add(myThirdNode);
+        boolean result = myLinkedList.head.equals(myThirdNode) &&  myLinkedList.head.getNext().equals(mySecondNode) &&  myLinkedList.tail.equals(myFirstNode);
         Assert.assertTrue(result);
     }
 }
