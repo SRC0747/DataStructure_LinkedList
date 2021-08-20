@@ -85,3 +85,25 @@ public class MyLinkedListTest {
         Assert.assertTrue(result);
     }
 }
+
+@Test
+/*Searching the node 30 from the linked list.*/
+public class MyLinkedListTest {
+    public void given3NumbersWhenAddedToLinkedListShouldBeAddedToTop() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.add(myFirstNode);
+        myLinkedList.add(mySecondNode);
+        myLinkedList.add(myThirdNode);
+        myLinkedList.add(myFirstNode);
+        myLinkedList.append(myThirdNode);
+        myLiinkedList.insert(myFirstNode,mySecondNode);
+        myLinkedList.pop();
+        myLinkedList.popLast();
+        boolean result = myLinkedList.head.equals(myFirstNode) &&  myLinkedList.head.getNext().equals(mySecondNode) &&  myLinkedList.tail.equals(myThirdNode);
+        myLinkedList.searchNode(30);
+        Assert.assertTrue(result);
+    }
+}
