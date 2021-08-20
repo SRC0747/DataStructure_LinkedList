@@ -164,3 +164,24 @@ public class delete40FromLinkedList{
         Assert.assertTrue(result);
     }
 }
+
+
+@Test
+/*Sorting the Linked List in Ascending Order*/
+public class SortAscendingOrderLinkedListFromTop {
+    public class sortAscendingOrderLinkedListFromTop {
+        MyNode<Integer> myFirstNode = new MyNode(56);
+        MyNode<Integer> mySecondNode = new MyNode(30);
+        MyNode<Integer> myThirdNode = new MyNode(40);
+        MyNode<Integer> myFourthNode = new MyNode(70);
+        myFirstNode.setNext(mySecondNode);
+        mySecondNode.setNext(myThirdNode);
+        myThirdNode.setNext(myFourthNode);
+        myLinkedList.add(mySecondNode);
+        myLinkedList.append(myFourthNode);
+        myLiinkedList.insert(mySecondNode,myThirdNode);
+        boolean result = myFirstNode.getNext().equals(mySecondNode) && myFirstNode.getNext().getNext().equals(myThirdNode) && myFirstNode.getNext().getNext().getNext().equals(myFourthNode);
+        nyLinkedList.sortLinkedListAscendingOrder();
+        Assert.assertTrue(result);
+    }
+}
