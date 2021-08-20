@@ -125,3 +125,4 @@ public class given4NumbersAddedToLinkedListFromTop {
         boolean result = myFirstNode.getNext().equals(mySecondNode) && myFirstNode.getNext().getNext().equals(myThirdNode) && myFirstNode.getNext().getNext().getNext().equals(myFourthNode);
         Assert.assertTrue(result);
     }
+}
