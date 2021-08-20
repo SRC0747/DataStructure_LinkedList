@@ -111,7 +111,7 @@ public class MyLinkedListTest {
 @Test
 /*Inserting 40 in the linked List of Sequence 56,30,70*/
 public class given4NumbersAddedToLinkedListFromTop {
-    public void given3NumbersWhenLinkShouldPassedLinkedListTest(){
+    public class given4NumbersAddedToLinkedListFromTop {
         MyNode<Integer> myFirstNode = new MyNode(56);
         MyNode<Integer> mySecondNode = new MyNode(30);
         MyNode<Integer> myThirdNode = new MyNode(40);
@@ -125,3 +125,24 @@ public class given4NumbersAddedToLinkedListFromTop {
         boolean result = myFirstNode.getNext().equals(mySecondNode) && myFirstNode.getNext().getNext().equals(myThirdNode) && myFirstNode.getNext().getNext().getNext().equals(myFourthNode);
         Assert.assertTrue(result);
     }
+}
+
+@Test
+/*Deleting 40 in the linked List of Sequence 56,30,70*/
+public class delete40FromLinkedList{
+    public class delete40FromLinkedList {
+        MyNode<Integer> myFirstNode = new MyNode(56);
+        MyNode<Integer> mySecondNode = new MyNode(30);
+        MyNode<Integer> myThirdNode = new MyNode(40);
+        MyNode<Integer> myFourthNode = new MyNode(70);
+        myFirstNode.setNext(mySecondNode);
+        mySecondNode.setNext(myThirdNode);
+        myThirdNode.setNext(myFourthNode);
+        myLinkedList.add(mySecondNode);
+        myLinkedList.append(myFourthNode);
+        myLiinkedList.insert(mySecondNode,myThirdNode);
+        myLinkedList.deleteFromMid(myThirdNode);
+        boolean result = myFirstNode.getNext().equals(mySecondNode) && myFirstNode.getNext().getNext().equals(myThirdNode) && myFirstNode.getNext().getNext().getNext().equals(myFourthNode);
+        Assert.assertTrue(result);
+    }
+}
